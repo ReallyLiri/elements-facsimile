@@ -26,6 +26,7 @@ def process_pdf(pdf_path):
     command = [
         "uv", "run", DETECT_SCRIPT,
         "--source", str(pdf_path.absolute()),
+        "--classes", "0",
         "--project", str((parent_dir / DIAGRAMS_DIR_NAME).absolute()),
         "--name", pdf_name
     ]

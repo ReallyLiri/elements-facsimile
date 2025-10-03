@@ -14,19 +14,16 @@ function parseImageName(filename) {
     if (parts.length >= 3) {
         const pageNumber = parts[0];
         const index = parts[parts.length - 1];
-        const classification = parts.slice(1, -1).join(' ');
 
         return {
             pageNumber,
-            classification,
             index,
-            displayName: `Page ${pageNumber} - ${classification} [${index}]`
+            displayName: `Page ${pageNumber} [#${index}]`
         };
     }
 
     return {
         pageNumber: '',
-        classification: '',
         index: '',
         displayName: filename
     };
@@ -50,7 +47,6 @@ function renderDiagrams(key, images) {
                 <h3 class="text-lg font-medium text-gray-900 mb-1">${imageInfo.displayName}</h3>
                 <div class="text-sm text-gray-600">
                     <p>Page: ${imageInfo.pageNumber}</p>
-                    <p>Type: ${imageInfo.classification}</p>
                     <p>Index: ${imageInfo.index}</p>
                 </div>
             </div>
