@@ -12,11 +12,7 @@ DETECT_SCRIPT = "detect.py"
 
 makedirs(DOCS_DIR / DIAGRAMS_DIR_NAME, exist_ok=True)
 
-KEYS = [
-    "Basel_1550",
-    "Rome_1574",
-    "Augsburg_1555"
-]
+KEYS = []
 
 
 def process_pdf(pdf_path):
