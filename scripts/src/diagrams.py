@@ -5,7 +5,7 @@ import subprocess
 from os import makedirs
 from pathlib import Path
 
-DOCS_DIR = Path(__file__).parent.parent / "docs"
+DOCS_DIR = Path(__file__).parent.parent.parent / "docs"
 DIAGRAMS_DIR_NAME = "diagrams"
 DETECTION_CWD = Path.home() / "sphaera-cordeep"
 DETECT_SCRIPT = "detect.py"

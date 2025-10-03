@@ -13,7 +13,7 @@ CSV_FILES = [
     ELEMENTS_DIR / 'public' / 'docs' / 'EiP.csv',
     ELEMENTS_DIR / 'public' / 'docs' / 'EiP-secondary.csv'
 ]
-PDF_OUTPUT_DIR = SCRIPT_DIR.parent / 'docs'
+PDF_OUTPUT_DIR = SCRIPT_DIR.parent.parent / 'docs'
 GOOGLE_BOOKS_PATTERN = r'/books/edition/([^/]+)/([^/?]+)'
 GOOGLE_BOOKS_DOWNLOAD_URL = 'https://{netloc}/books/download/{name}.pdf?id={book_id}&output=pdf'
 
