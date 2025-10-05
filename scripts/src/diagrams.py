@@ -81,6 +81,12 @@ def main():
         if process_pdf(pdf_file):
             success_count += 1
 
+            crops_dir = diagram_dir / "crops"
+            if not crops_dir.exists() or not any(crops_dir.iterdir()):
+                none_file = diagram_dir / "none.txt"
+                none_file.touch()
+                print(f"No diagrams found for {pdf_name}, created {none_file}")
+
     print(f"\nProcessing complete! {success_count}/{len(pdf_files)} files processed successfully, {skipped_count} skipped.")
 
 
